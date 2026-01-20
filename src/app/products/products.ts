@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../services/products';
-import { Observable } from 'rxjs';
-import { Card } from "../shared/components/card/card";
+import { BehaviorSubject, combineLatest, map } from 'rxjs';
+import { Card } from '../shared/components/card/card';
 import { ProductType } from '../interfaces/product.interface';
 
 @Component({
@@ -13,9 +13,27 @@ import { ProductType } from '../interfaces/product.interface';
   styleUrls: ['./products.css'],
 })
 export class ProductsComponent {
-  products$!: Observable<ProductType[]>;
+  products$;
+  selectedCategory$ = new BehaviorSubject<string>('all');
+
+  categories$;
+  filteredProducts$;
 
   constructor(private productsService: ProductsService) {
     this.products$ = this.productsService.getProducts();
+
+    this.categories$ = this.products$.pipe(
+      map((products) => ['all', ...new Set(products.map((p) => p.category))]),
+    );
+
+    this.filteredProducts$ = combineLatest([this.products$, this.selectedCategory$]).pipe(
+      map(([products, category]) =>
+        category === 'all' ? products : products.filter((p) => p.category === category),
+      ),
+    );
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory$.next(category);
   }
 }

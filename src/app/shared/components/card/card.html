@@ -1,9 +1,9 @@
-<section class="hero">
-    <article class="hero-preview">
-        <img [src]="product().images?.[0]" alt=" {{ product().title}}" class="hero-preview-img">
+<section class="product-card">
+    <article class="product-card__image">
+        <img [src]="product().image" alt=" {{ product().title}}" class="product-card__image">
     </article>
 
-    <article class="description-section">
+    <article class="product-card__content">
         <section class="description-section-items">
             <h3>{{ shortTitle }}</h3>
 

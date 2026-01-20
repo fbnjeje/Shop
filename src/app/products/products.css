@@ -1,7 +1,43 @@
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+  justify-content: center;
+}
 .hero {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+
+  border: 2px solid #6651d3;
+  background-color: transparent;
+  color: #6651d3;
+
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #6651d3;
+  color: white;
 }
