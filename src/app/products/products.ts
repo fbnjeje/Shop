@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ProductsService } from '../services/products';
 import { BehaviorSubject, combineLatest, map } from 'rxjs';
 import { Card } from '../shared/components/card/card';
-import { ProductType } from '../interfaces/product.interface';
 
 @Component({
   selector: 'app-products',
