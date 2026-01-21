@@ -1,5 +1,5 @@
-<!-- <app-header></app-header> -->
-<!-- <app-products></app-products> -->
-<app-biding [(count)]="myCounter"></app-biding>
-
-<p>{{ myCounter }}</p>
+<section class="father__container" [ngClass]="{ active: isActive, disable: isDisable }">
+  <button (click)="changeMode()">click</button>
+  <app-header></app-header>
+  <app-products></app-products>
+</section>

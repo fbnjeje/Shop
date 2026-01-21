@@ -1,0 +1,9 @@
+.father__container {
+}
+.active {
+  background-color: var(--dark-background);
+}
+
+.disable {
+  background-color: var(--white-color);
+}

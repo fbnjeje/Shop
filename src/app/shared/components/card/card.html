@@ -1,15 +1,17 @@
 <section class="product-card">
-    <article class="product-card__image">
-        <img [src]="product().image" alt=" {{ product().title}}" class="product-card__image">
-    </article>
+  <article class="product-card__image">
+    <img [src]="product().image" alt=" {{ product().title }}" class="product-card__image" />
+  </article>
 
-    <article class="product-card__content">
-        <section class="description-section-items">
-            <h3>{{ shortTitle }}</h3>
+  <article class="product-card__content">
+    <section class="description-section-items">
+      <h3 class="name__item">{{ shortTitle }}</h3>
 
-            <article class="price-section">
-                <p class="price"> <i class='bx  bx-cart-alt-2' style='color:#6651d3'></i>  {{ product().price}}</p>
-            </article>
-        </section>
-    </article>
+      <article class="price-section">
+        <p class="price">
+          <i class="bx bx-cart-alt-2" style="color: var(--primary-color)"></i> {{ product().price }}
+        </p>
+      </article>
+    </section>
+  </article>
 </section>
