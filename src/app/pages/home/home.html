@@ -1,5 +1,5 @@
-<section class="father__container" [ngClass]="{ active: isActive, disable: isDisable }">
-  <button (click)="changeMode()">click</button>
+<section class="father__container" [class.active]="isDarkMode()">
+  <button (click)="isDarkMode.set(!isDarkMode())">click</button>
   <app-header></app-header>
   <app-products></app-products>
 </section>

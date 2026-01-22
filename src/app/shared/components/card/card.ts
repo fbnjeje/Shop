@@ -1,6 +1,5 @@
 import { Component, input } from '@angular/core';
 import { ProductType } from '../../../interfaces/product.interface';
-import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-card',
@@ -9,15 +8,12 @@ import { SlicePipe } from '@angular/common';
   styleUrl: './card.css',
 })
 export class Card {
-maxTitleLength = 25;
+  maxTitleLength = 23;
 
-get shortTitle(): string {
-  const title = this.product().title;
-  return title.length > this.maxTitleLength
-    ? title.slice(0, this.maxTitleLength) + '…'
-    : title;
-}
+  get shortTitle(): string {
+    const title = this.product().title;
+    return title.length > this.maxTitleLength ? title.slice(0, this.maxTitleLength) + '…' : title;
+  }
 
-  product = input.required<ProductType>()
-
+  product = input.required<ProductType>();
 }

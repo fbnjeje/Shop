@@ -11,18 +11,5 @@ import { IfStmt } from '@angular/compiler';
   styleUrl: './home.css',
 })
 export class Home {
-  isActive = true;
-  isDisable = false;
-
-
-
-    isDarkMode = signal(true)
-  changeMode() {
-    if (this.isActive == true) {
-      console.log(this.isActive);
-      this.isActive = false;
-    } else {
-      this.isActive = true;
-    }
-  }
+  isDarkMode = signal(false);
 }
