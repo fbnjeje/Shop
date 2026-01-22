@@ -26,13 +26,19 @@ export class ProductsComponent {
     );
 
     this.filteredProducts$ = combineLatest([this.products$, this.selectedCategory$]).pipe(
-      map(([products, category]) =>
-        category === 'all' ? products : products.filter((p) => p.category === category),
+      map(([products, caterory]) =>
+        caterory === 'all' ? products : products.filter((p) => p.category === caterory),
       ),
     );
   }
 
   selectCategory(category: string) {
     this.selectedCategory$.next(category);
+  }
+
+  cart: any[] = [];
+
+  addToCart(producto: any) {
+    this.cart.push(producto);
   }
 }
