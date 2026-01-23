@@ -1,13 +1,13 @@
 import { map } from 'rxjs';
 import { ProductsService } from './../../services/products';
 import { Component, inject, input, output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [CommonModule],
   templateUrl: './product-detail.html',
+  imports: [CommonModule, RouterLink],
   styleUrl: './product-detail.css',
 })
 export class ProductDetail {
