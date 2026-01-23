@@ -2,11 +2,7 @@
   <article class="header__brand">
     <i class="bx bx-shinto header__logo"></i>
 
-    <input
-      type="text"
-      class="header__search-bar"
-      placeholder="Search products..."
-    />
+    <input type="text" class="header__search-bar" placeholder="Search products..." />
   </article>
 
   <article class="header__nav">
@@ -22,9 +18,14 @@
           <span>Favorite</span>
         </li>
 
-        <li class="header__item">
+        <!-- 🛒 CARRITO -->
+        <li class="header__item" (click)="openCart.emit()">
           <i class="bx bx-cart"></i>
           <span>Cart</span>
+
+          <span class="cart-badge" *ngIf="cartCount() > 0">
+            {{ cartCount() }}
+          </span>
         </li>
       </ul>
     </nav>

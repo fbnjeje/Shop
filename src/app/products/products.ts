@@ -37,8 +37,17 @@ export class ProductsComponent {
   }
 
   cart: any[] = [];
+  showCart = false;
 
-  addToCart(producto: any) {
-    this.cart.push(producto);
+  addToCart(product: any) {
+    this.cart.push(product);
+  }
+
+  openCart() {
+    this.showCart = true;
+  }
+
+  closeCart() {
+    this.showCart = false;
   }
 }
