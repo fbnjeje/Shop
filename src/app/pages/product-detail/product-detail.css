@@ -5,9 +5,27 @@
   padding: 1rem;
 }
 
+.back-button {
+  margin: 20px;
+  margin-top: 1.5rem;
+  padding: 15px 0px;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 170px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
 .product-detail {
   max-width: 1100px;
-  margin: 3rem auto;
+  margin: 0.4rem auto;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
