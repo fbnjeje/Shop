@@ -5,5 +5,5 @@ import { ProductDetail } from './pages/product-detail/product-detail';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'product/:id', component: ProductDetail },
+  { path: 'products/:id', component: ProductDetail },
 ];

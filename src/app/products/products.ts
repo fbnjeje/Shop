@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsService } from '../services/products';
 import { BehaviorSubject, combineLatest, map } from 'rxjs';
 import { Card } from '../shared/components/card/card';
+import { ProductDetail } from '../pages/product-detail/product-detail';
 
 @Component({
   selector: 'app-products',
@@ -34,20 +35,5 @@ export class ProductsComponent {
 
   selectCategory(category: string) {
     this.selectedCategory$.next(category);
-  }
-
-  cart: any[] = [];
-  showCart = false;
-
-  addToCart(product: any) {
-    this.cart.push(product);
-  }
-
-  openCart() {
-    this.showCart = true;
-  }
-
-  closeCart() {
-    this.showCart = false;
   }
 }

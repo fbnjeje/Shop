@@ -1,4 +1,4 @@
-<section class="product-card">
+<section class="product-card" (click)="emitId()">
   <article class="product-card__image">
     <img [src]="product().image" alt=" {{ product().title }}" class="product-card__image" />
   </article>
