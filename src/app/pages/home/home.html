@@ -1,4 +1,6 @@
 <section class="father__container" [class.active]="isDarkMode()">
-  <button (click)="isDarkMode.set(!isDarkMode())">click</button>
+  <p (click)="isDarkMode.set(!isDarkMode())">
+    <i class="bx bx-moon-stars" style=""></i>
+  </p>
   <app-products></app-products>
 </section>

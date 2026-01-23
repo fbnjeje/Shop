@@ -5,3 +5,10 @@
 .disable {
   background-color: var(--white-color);
 }
+
+.bx-moon-stars {
+  background-color: rgb(174, 174, 174);
+  font-size: 80px;
+  position: relative;
+  border-radius: 20px;
+}
