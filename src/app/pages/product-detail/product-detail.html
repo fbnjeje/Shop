@@ -1,8 +1,17 @@
-<div *ngIf="product$ | async as product; else notFound">
-  <h2>{{ product.title }}</h2>
-  <img [src]="product.image" alt="" />
-  <p>{{ product.description }}</p>
-  <strong>{{ product.price }}</strong>
+<div class="page-center">
+  <div class="product-detail" *ngIf="product$ | async as product; else notFound">
+    <div class="product-detail__image">
+      <img [src]="product.image" [alt]="product.title" />
+    </div>
+
+    <div class="product-detail__info">
+      <h1>{{ product.title }}</h1>
+      <p class="description">{{ product.description }}</p>
+      <span class="price">${{ product.price }}</span>
+
+      <button class="btn">Agregar al carrito</button>
+    </div>
+  </div>
 </div>
 
 <ng-template #notFound>
