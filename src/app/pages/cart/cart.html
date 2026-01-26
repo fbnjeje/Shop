@@ -1,0 +1,13 @@
+<p>cart works!</p>
+<span *ngIf="cart$ | async as cart" click> 🛒 {{ cart.length }} </span>
+
+@for (producto of cart$ | async; track producto.id) {
+  <div class="cart-item">
+    <img [src]="producto.image" />
+    <h1>{{ producto.title }}</h1>
+    <p>${{ producto.price }}</p>
+    <button class="remove-btn" (click)="remove(producto.id)">
+      <i class="bx bx-trash"></i>
+    </button>
+  </div>
+}

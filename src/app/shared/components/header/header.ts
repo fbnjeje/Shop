@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../../services/cartservice';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
-  cartCount = input<number>(0);
-  openCart = output<void>();
+  private cartService = inject(CartService);
+
+  cart$ = this.cartService.cart$;
 }

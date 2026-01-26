@@ -10,7 +10,7 @@
       <p class="description">{{ product.description }}</p>
       <span class="price">${{ product.price }}</span>
 
-      <button class="btn">Agregar al carrito</button>
+      <button class="btn" (click)="addToCart(product)">Agregar al carrito</button>
     </div>
   </div>
 </div>

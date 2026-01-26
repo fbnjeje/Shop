@@ -18,14 +18,10 @@
           <span>Favorite</span>
         </li>
 
-        <!-- 🛒 CARRITO -->
-        <li class="header__item" (click)="openCart.emit()">
-          <i class="bx bx-cart"></i>
+        <li class="header__item" routerLink="/cart">
+          <i class="bx bx-cart"></i
+          ><span *ngIf="cart$ | async as cart" click> {{ cart.length }} </span>
           <span>Cart</span>
-
-          <span class="cart-badge" *ngIf="cartCount() > 0">
-            {{ cartCount() }}
-          </span>
         </li>
       </ul>
     </nav>

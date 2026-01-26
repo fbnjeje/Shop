@@ -6,7 +6,7 @@ import { ProductDetail } from '../product-detail/product-detail';
 
 @Component({
   selector: 'app-home',
-  imports: [ProductsComponent, Header, CommonModule],
+  imports: [ProductsComponent, CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
